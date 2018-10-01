@@ -9,9 +9,9 @@ class BaseClass {
     this.logElement;
     this.name        = properties.name;
     this.className   = properties.class || this.name || 'base';
-    this.init();
+    this.__init();
   } 
-  init() {
+  __init() {
     let className     = this.class || this.name;
     this.element      = this._attachNewElement(this.className);
     this.logElement   = this._attachNewElement(['log-area', this.className + '__log-area']);
@@ -48,10 +48,10 @@ class BaseClass {
   log(text) {
     let div = document.createElement('div');
     div.append(document.createTextNode(text));    
-    this.logElement.append(div);   
+    this.logElement.insertBefore(div, this.logElement.firstChild);   
     
     // go to std-out
-    console.log(`${this.name ? '['+this.name+'] ' : ''}${text}`);
+    console.log(`${this.name ? '['+this.name+'] ' : ''}`, text);
     
     return this.logElement; 
   }
