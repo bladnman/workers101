@@ -1,0 +1,22 @@
+body {
+  font-family       : "Benton Sans", "Helvetica Neue", helvetica, arial, sans-serif;
+  margin            : 4em 2em 2em 2em;
+}
+.glitchButton { 
+    z-index: 1000;
+}
+.log-area {
+  position          : relative;
+  background-color  :#f8f8f8;
+  border            : 1px solid #c0c0c0;
+  padding           : 1.85em 0.5em 0.5em;
+  margin            : 1em 0;
+}
+.name-tag {
+  position          : absolute;
+  top               :0;
+  left              : 0;
+  padding           : 0.2em 0.4em;
+  background        : #d5d5d5;
+  border            : 1px solid #c0c0c0;
+}
